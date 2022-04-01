@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <script src="https://kit.fontawesome.com/444b1c8316.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --color-button-text: rgb(43, 199, 165);
+            --color-button-icon: rgb(30, 171, 141);
+        }
+
+        * {
+            padding: 0;
+            border: 0;
+        }
+
+        button {
+            height: 2.5rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+                sans-serif;
+            /*display: inline-flex;*/
+            width: fit-content;
+            cursor: pointer;
+            border-radius: 7px;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+            background-color: var(--color-button-text);
+        }
+
+        button:hover {
+            /* filter: contrast(90%);  */
+            filter: brightness(90%);
+        }
+
+        button:active {
+            filter: brightness(80%);
+            transform: translateY(3px);
+        }
+
+        .btn__text,
+        .btn__icon {
+            padding: 0 0.4rem;
+            /*   height: 2rem;
+ */
+            height: 100%;
+            /*height 100% olması background eklenince anlaşılıyor*/
+            /* display: grid;
+  place-items: center; */
+            display: inline-flex;
+            align-items: center;
+            color: rgb(43, 15, 15);
+        }
+
+        .btn__icon {
+            /*   background-color: var(--color-button-icon);
+ */
+            background: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button">
+        <span class="btn__text">Download</span>
+        <i class="fa-solid fa-download btn__icon"></i>
+    </button>
+</body>
+
+</html>
